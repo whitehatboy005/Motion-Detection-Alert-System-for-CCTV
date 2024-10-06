@@ -17,6 +17,9 @@ This repository contains two main tools:
 - **Configurable settings**: Set up the Telegram Bot Token, IP Camera URL, and ROI coordinates via environment variables.
 - **Efficient motion detection**: Only monitors motion within the defined ROI to minimize unnecessary alerts.
 
+## WEBCAM Motion Detection Repository for project submission
+- **Check on this repository** https://github.com/whitehatboy005/Motion-Detection-Alert-System-for-Webcam
+
 ## Installation
 ## Clone the Repository
 ```bash
