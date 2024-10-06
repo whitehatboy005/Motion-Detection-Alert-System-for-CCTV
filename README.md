@@ -18,7 +18,7 @@ This repository contains two main tools:
 - **Efficient motion detection**: Only monitors motion within the defined ROI to minimize unnecessary alerts.
 
 ## WEBCAM Motion Detection Repository for project submission
-- **Check on this repository** https://github.com/whitehatboy005/Motion-Detection-Alert-System-for-Webcam
+  **Check on this repository** https://github.com/whitehatboy005/Motion-Detection-Alert-System-for-Webcam
 
 ## Installation
 ## Clone the Repository
