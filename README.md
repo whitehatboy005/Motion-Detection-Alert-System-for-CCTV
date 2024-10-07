@@ -5,7 +5,6 @@ This repository contains two main tools:
 2. **IP Camera Motion Detection Tool**: A CCTV-like system that monitors an IP camera feed for motion within the defined ROI and sends alerts via Telegram.
 
 ## Features
-
 ### 1. ROI Point Finder Tool:
 - Graphically select the **Region of Interest (ROI)** on your screen.
 - Print the start and end coordinates of the ROI for use in motion detection.
@@ -16,10 +15,12 @@ This repository contains two main tools:
 - **Send Telegram alerts**: When motion is detected, a snapshot of the frame is sent to a Telegram chat.
 - **Configurable settings**: Set up the Telegram Bot Token, IP Camera URL, and ROI coordinates via environment variables.
 - **Efficient motion detection**: Only monitors motion within the defined ROI to minimize unnecessary alerts.
+#
+## Instructions
+To get Chat ID visit [@GetMyChatID_Bot](https://t.me/GetMyChatID_Bot) Now you will copy the chat Id and config it.
 
-## WEBCAM Motion Detection Repository for project submission
-  **Check on this repository** https://github.com/whitehatboy005/Motion-Detection-Alert-System-for-Webcam
-
+To access the bot [@SecurityAlertBot](https://t.me/ProjectResultBot) and START it.
+#
 ## Installation
 ## Clone the Repository
 ```bash
@@ -41,17 +42,15 @@ python ROI_point_finder.py
 ```bash
 notepad config.env
 ```
+## Ensure start the bot
+[@SecurityAlertBot](https://t.me/ProjectResultBot)
 ## Run the Program
 ```bash
 python CCTV_Alert.py
 ```
-
-## Instructions
-
-To get Chat ID visit [@GetMyChatID_Bot](https://t.me/GetMyChatID_Bot) Now you will copy the chat Id and config it.
-
-To access the bot [@SecurityAlertBot](https://t.me/ProjectResultBot) and START it.
-
+#
+## WEBCAM Motion Detection Alert System Repository for project submission
+  **Check on this repository** https://github.com/whitehatboy005/Motion-Detection-Alert-System-for-Webcam
+#
 ## License
-
 This project is licensed under the terms of the [MIT license](LICENSE.md).
