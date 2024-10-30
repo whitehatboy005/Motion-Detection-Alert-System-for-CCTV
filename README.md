@@ -19,7 +19,7 @@ This repository contains two main tools:
 ## Instructions
 To get Chat ID visit [@GetMyChatID_Bot](https://t.me/GetMyChatID_Bot) Now you will copy the chat Id and config it.
 
-To access the bot [@SecurityAlertBot](https://t.me/ProjectResultBot) and START it.
+To access the bot [@SecurityAlertBot](http://t.me/CAMSEC_AlertBot) and START it.
 #
 ## Installation
 ## Clone the Repository
@@ -43,7 +43,7 @@ python ROI_point_finder.py
 notepad config.env
 ```
 ## Ensure start the bot
-Start it --> [@SecurityAlertBot](https://t.me/ProjectResultBot)
+Start it --> [@SecurityAlertBot](http://t.me/CAMSEC_AlertBot)
 ## Test the bot Perfectly Configured
 ```bash
 python bot.py
