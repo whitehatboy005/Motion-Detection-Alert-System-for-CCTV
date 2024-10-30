@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv('config.env')
-BOT_TOKEN = "7277236805:AAFNFtqNHKUzbKle0UqjEguMco6gOmrM7gQ"
+BOT_TOKEN = "7787875894:AAFUdd-82IZbgg33vgViV70fHBIRJDOfZlQ"
 CHAT_ID = os.getenv("CHAT_ID")
 roi_start_point_str = os.getenv('ROI_START_POINT')
 roi_end_point_str = os.getenv('ROI_END_POINT')
