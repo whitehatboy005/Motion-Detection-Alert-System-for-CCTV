@@ -44,10 +44,10 @@ notepad config.env
 ```
 ## Ensure start the bot
 Start it --> [@SecurityAlertBot](http://t.me/CAMSEC_AlertBot)
-## Test the bot Perfectly Configured
-```bash
-python bot.py
-```
+#
+## To check on configuration in Telegram
+Type [/check] Then check it out.
+#
 ## Run the main Program
 ```bash
 python CCTV_Alert.py
