@@ -2,7 +2,7 @@ import cv2
 import requests
 import os
 import threading
-from time import time
+from time import time, sleep
 from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
@@ -16,8 +16,11 @@ roi_end_point_str = os.getenv('ROI_END_POINT')
 ip_camera_url = os.getenv("IP_CAMERA_URL")
 
 # Convert ROI start and end points from strings to tuples
-roi_start_point = tuple(map(int, roi_start_point_str.split(','))) if isinstance(roi_start_point_str, str) else roi_start_point_str
-roi_end_point = tuple(map(int, roi_end_point_str.split(','))) if isinstance(roi_end_point_str, str) else roi_end_point_str
+roi_start_point = tuple(map(int, roi_start_point_str.split(','))) if isinstance(roi_start_point_str,
+                                                                                str) else roi_start_point_str
+roi_end_point = tuple(map(int, roi_end_point_str.split(','))) if isinstance(roi_end_point_str,
+                                                                            str) else roi_end_point_str
+
 
 # Function to send an alert with photo
 def send_alert(photo_path):
@@ -37,6 +40,24 @@ def send_alert(photo_path):
         except Exception as e:
             print(f"Exception occurred: {e}")
 
+
+# Function to send an alert when the IP camera connection is lost
+def send_connection_lost_alert():
+    url = f'https://api.telegram.org/bot{BOT_TOKEN}/sendMessage'
+    payload = {
+        'chat_id': CHAT_ID,
+        'text': 'Alert! Connection to the IP camera was lost.'
+    }
+    try:
+        response = requests.post(url, data=payload)
+        if response.status_code == 200:
+            print("Connection lost alert sent successfully!")
+        else:
+            print(f"Failed to send connection lost alert: {response.status_code} - {response.text}")
+    except Exception as e:
+        print(f"Exception occurred: {e}")
+
+
 # Async command for checking configuration
 async def check(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     config_message = (
@@ -47,7 +68,8 @@ async def check(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     )
     await update.message.reply_text(config_message)
 
-# Motion detection logic
+
+# Motion detection logic with cooldown for repeated alerts
 def motion_detection():
     cap = cv2.VideoCapture(ip_camera_url)
 
@@ -58,12 +80,21 @@ def motion_detection():
     alert_interval = 10  # Time in seconds between alerts
     object_detected_frames = 0  # Counter for frames with persistent object detection
     last_alert_time = 0
+    last_connection_status = True
 
     while True:
         ret, frame = cap.read()
+
+        # Check if connection is lost
         if not ret:
+            if last_connection_status:  # Send alert only when the connection is lost initially
+                send_connection_lost_alert()
+                last_connection_status = False  # Update status to avoid repeated alerts
             print("Failed to grab frame from IP camera")
-            break
+            sleep(5)  # Retry after some delay
+            continue
+        else:
+            last_connection_status = True  # Reset status when connection is restored
 
         # Draw the ROI for visualization
         cv2.rectangle(frame, roi_start_point, roi_end_point, (0, 255, 0), 2)
@@ -110,7 +141,10 @@ def motion_detection():
     # Release resources
     cap.release()
     cv2.destroyAllWindows()
+
+
 print("Alerting System Activated...")
+
 # Set up the bot application
 app = ApplicationBuilder().token(BOT_TOKEN).build()
 app.add_handler(CommandHandler("check", check))
