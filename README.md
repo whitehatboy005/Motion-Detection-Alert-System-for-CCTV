@@ -25,9 +25,6 @@ To access the bot [@SecurityAlertBot](http://t.me/CAMSEC_AlertBot) and START it.
 ## Clone the Repository
 ```bash
 git clone https://github.com/whitehatboy005/Motion-Detection-Alert-System-for-CCTV
-```
-## Move the file
-```bash
 cd Motion-Detection-Alert-System-for-CCTV
 ```
 ## Install Dependencies
