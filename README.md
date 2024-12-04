@@ -1,4 +1,5 @@
 # IP Camera Motion Detection with Telegram Alerts
+[![License](https://img.shields.io/github/license/whitehatboy005/Motion-Detection-Alert-System-for-CCTV)](LICENSE.md)
 
 This repository contains two main tools:
 1. **ROI Selector Tool**: A graphical tool to help users easily select a Region of Interest (ROI) from the screen.
