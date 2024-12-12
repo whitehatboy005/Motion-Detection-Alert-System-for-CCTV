@@ -54,5 +54,9 @@ Type [/check] Then check it out.
 ## WEBCAM Motion Detection Alert System Repository for project submission
   **Check on this repository** https://github.com/whitehatboy005/Motion-Detection-Alert-System-for-Webcam
 #
+
+## Contribution:
+**Contributions are welcome! If you have any suggestions for improvements or bug fixes, feel free to submit a pull request.**
+
 ## License
 This project is licensed under the terms of the [MIT license](LICENSE.md).
