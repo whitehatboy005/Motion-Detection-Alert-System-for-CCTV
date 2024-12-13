@@ -3,4 +3,4 @@ requests
 python-dotenv
 pyautogui
 pillow
-python-telegram-bot
+python-telegram-bot==13.12
