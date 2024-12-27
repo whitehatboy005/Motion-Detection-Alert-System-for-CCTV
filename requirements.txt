@@ -1,6 +1,6 @@
-opencv-python
-requests
-python-dotenv
-pyautogui
-pillow
-python-telegram-bot==13.7
+opencv-python==4.10.0.84
+requests==2.32.3
+python-dotenv==1.0.1
+PyAutoGUI==0.9.54
+pillow==10.4.0
+python-telegram-bot==21.9
