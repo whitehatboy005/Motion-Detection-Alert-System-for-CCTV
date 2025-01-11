@@ -20,8 +20,8 @@ def on_release(event):
     global roi_end_x, roi_end_y, drawing
     roi_end_x, roi_end_y = event.x, event.y
     drawing = False
-    print(f"ROI_START_POINT: {roi_start_x}, {roi_start_y}")
-    print(f"ROI_END_POINT: {roi_end_x}, {roi_end_y}")
+    print(f"ROI_START_POINT = {roi_start_x}, {roi_start_y}")
+    print(f"ROI_END_POINT = {roi_end_x}, {roi_end_y}")
     root.destroy()
 
 # Setup tkinter window
