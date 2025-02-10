@@ -1,11 +1,11 @@
-# IP Camera Motion Detection with Telegram Alerts
+#  📸 IP Camera Motion Detection with Telegram Alerts
 [![License](https://img.shields.io/github/license/whitehatboy005/Motion-Detection-Alert-System-for-CCTV)](LICENSE.md)
 
 This repository contains two main tools:
 1. **ROI Selector Tool**: A graphical tool to help users easily select a Region of Interest (ROI) from the screen.
 2. **IP Camera Motion Detection Tool**: A CCTV-like system that monitors an IP camera feed for motion within the defined ROI and sends alerts via Telegram.
 
-## Features
+##  📌 Features
 ### 1. ROI Point Finder Tool:
 - Graphically select the **Region of Interest (ROI)** on your screen.
 - Print the start and end coordinates of the ROI for use in motion detection.
@@ -17,7 +17,7 @@ This repository contains two main tools:
 - **Configurable settings**: Set up the Telegram Bot Token, IP Camera URL, and ROI coordinates via environment variables.
 - **Efficient motion detection**: Only monitors motion within the defined ROI to minimize unnecessary alerts.
 #
-## Instructions
+## 📝Instructions
 To get Chat ID visit [@GetMyChatID_Bot](https://t.me/GetMyChatID_Bot) Now you will copy the chat Id and config it.
 
 To access the bot [@SecurityAlertBot](http://t.me/CAMSEC_AlertBot) and START it.
@@ -29,7 +29,7 @@ To access the bot [@SecurityAlertBot](http://t.me/CAMSEC_AlertBot) and START it.
 ## Telegram Bot Alert
 ![Screenshot 2024-12-13 111934](https://github.com/user-attachments/assets/9b307fa0-4e57-4bc3-bc48-a4e02e8916b4)
 #
-## Installation
+## ⚙️ Installation
 ## Clone the Repository
 ```bash
 git clone https://github.com/whitehatboy005/Motion-Detection-Alert-System-for-CCTV
@@ -62,8 +62,8 @@ Type [/check] Then check it out.
   **Check on this repository** https://github.com/whitehatboy005/Motion-Detection-Alert-System-for-Webcam
 #
 
-## Contribution:
+## 👨‍💻 Contribution:
 **Contributions are welcome! If you have any suggestions for improvements or bug fixes, feel free to submit a pull request.**
 
-## License
+## 📝 License
 This project is licensed under the terms of the [MIT license](LICENSE.md).
