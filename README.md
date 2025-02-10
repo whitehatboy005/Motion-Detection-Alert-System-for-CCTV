@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ```bash
 python ROI_point_finder.py
 ```
-## Config The Details
+## Configure Environment Variables
 ```bash
 notepad config.env
 ```
