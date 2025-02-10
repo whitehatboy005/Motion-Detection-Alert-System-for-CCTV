@@ -5,7 +5,7 @@ This repository contains two main tools:
 1. **ROI Selector Tool**: A graphical tool to help users easily select a Region of Interest (ROI) from the screen.
 2. **IP Camera Motion Detection Tool**: A CCTV-like system that monitors an IP camera feed for motion within the defined ROI and sends alerts via Telegram.
 
-##  📌 Features
+##  🚀 Features
 ### 1. ROI Point Finder Tool:
 - Graphically select the **Region of Interest (ROI)** on your screen.
 - Print the start and end coordinates of the ROI for use in motion detection.
@@ -17,7 +17,7 @@ This repository contains two main tools:
 - **Configurable settings**: Set up the Telegram Bot Token, IP Camera URL, and ROI coordinates via environment variables.
 - **Efficient motion detection**: Only monitors motion within the defined ROI to minimize unnecessary alerts.
 #
-## 📝Instructions
+## 📌 Instructions
 To get Chat ID visit [@GetMyChatID_Bot](https://t.me/GetMyChatID_Bot) Now you will copy the chat Id and config it.
 
 To access the bot [@SecurityAlertBot](http://t.me/CAMSEC_AlertBot) and START it.
